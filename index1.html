@@ -1,0 +1,223 @@
+<!DOCTYPE html>
+<html lang="ru">
+  <head>
+    <title>Лабораторная работа 3 - Задание 1</title>
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+      }
+
+      body {
+        font-family: arial;
+        padding: 20px;
+        background: #f0f0f0;
+      }
+
+      .nav {
+        background: linear-gradient(to bottom, #e1e1e1, rgb(208, 208, 208));
+        border-radius: 4px;
+        height: 50px;
+        margin-bottom: 20px;
+        box-shadow: 5px 3px rgb(165, 165, 165);
+        overflow: hidden;
+      }
+
+      .nav .pt {
+        background: linear-gradient(to bottom, #e3e3e3, rgb(239, 239, 239));
+        text-decoration: none;
+        font-size: 20px;
+        text-align: center;
+        display: block;
+        float: left;
+        border-style: solid;
+        border-width: 0 0.5px 0 0;
+        border-radius: 4px;
+        padding: 13px 35px;
+        margin: 0 1px;
+        color: black;
+        text-transform: uppercase;
+        font-weight: 700;
+      }
+
+      .nav .pt:hover {
+        background: linear-gradient(
+          to bottom,
+          rgb(204, 204, 204),
+          rgb(145, 145, 145)
+        );
+      }
+
+      .nav div {
+        float: left;
+        position: relative;
+      }
+
+      .nav div:hover .drop {
+        display: block;
+      }
+
+      .base1 {
+        float: left;
+        width: 200px;
+        height: 70vh;
+        border-style: solid;
+        border-color: #333;
+        background: #f9f9f9;
+        overflow-y: auto;
+        margin-right: 20px;
+        padding: 15px;
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+      }
+
+      .base3 {
+        float: right;
+        width: 200px;
+        height: 70vh;
+        border-style: solid;
+        border-color: #333;
+        background: #f9f9f9;
+        overflow-y: auto;
+        margin-left: 20px;
+        padding: 15px;
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+      }
+
+      h4 {
+        font-size: 20px;
+        font-weight: bold;
+        text-align: center;
+        margin-bottom: 15px;
+        padding-bottom: 10px;
+        border-bottom: 2px solid #333;
+        color: #333;
+      }
+
+      .base2 {
+        position: relative;
+        overflow: hidden;
+        height: 70vh;
+        border-style: solid;
+        border-color: #333;
+        background: linear-gradient(to right, #d1f55b, #c2e9ff);
+        padding: 20px;
+      }
+
+      .square-container {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 20px;
+        justify-content: center;
+        align-items: center;
+        min-height: 100%;
+      }
+
+      .square {
+        position: relative;
+        width: 150px;
+        height: 150px;
+        background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+        border-radius: 10px;
+        overflow: hidden;
+        box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+      }
+
+      .square .txt {
+        font-size: 24px;
+        color: white;
+        width: 100%;
+        height: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        position: relative;
+        z-index: 1;
+      }
+
+      .square .layer {
+        position: absolute;
+        bottom: -30%;
+        left: 0;
+        width: 100%;
+        height: 30%;
+        background-color: rgba(0, 0, 0, 0.8);
+        color: white;
+        text-align: center;
+        padding: 10px;
+        font-size: 16px;
+        text-decoration: none;
+        transition: bottom 0.3s ease;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        z-index: 2;
+      }
+
+      .square:hover .layer {
+        bottom: 0;
+      }
+
+      .clear {
+        clear: both;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="nav">
+      <div>
+        <a class="pt" href="#">Главная</a>
+      </div>
+      <a class="pt" href="#">Отделы продаж</a>
+      <div>
+        <a class="pt" href="#">Поставщики</a>
+      </div>
+      <a class="pt" href="#">Наши услуги</a>
+      <a class="pt" href="#">Контакты</a>
+      <a class="pt" href="#">О нас</a>
+    </div>
+
+    <div class="base1">
+      <h4>НОВОСТИ</h4>
+      <p>
+        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod
+        tempor incididunt ut labore et dolore magna aliqua.
+      </p>
+      <p style="margin-top: 10px">
+        Duis aute irure dolor in reprehenderit in voluptate velit esse cillum
+        dolore eu fugiat nulla pariatur.
+      </p>
+    </div>
+
+    <div class="base3">
+      <h4>О НАС</h4>
+      <p>
+        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod
+        tempor incididunt ut labore et dolore magna aliqua.
+      </p>
+      <p style="margin-top: 10px">
+        Excepteur sint occaecat cupidatat non proident, sunt in culpa qui
+        officia deserunt mollit anim id est laborum.
+      </p>
+    </div>
+
+    <div class="base2">
+      <div class="square-container">
+        <div class="square">
+          <div class="txt">BASE 1</div>
+          <a href="#" class="layer">CSS</a>
+        </div>
+        <div class="square">
+          <div class="txt">BASE 2</div>
+          <a href="#" class="layer">CSS</a>
+        </div>
+        <div class="square">
+          <div class="txt">BASE 3</div>
+          <a href="#" class="layer">CSS</a>
+        </div>
+      </div>
+    </div>
+
+    <div class="clear"></div>
+  </body>
+</html>

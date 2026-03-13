@@ -1,0 +1,208 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <title>Лабораторная работа 3 CSS</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: arial;
+            padding: 20px;
+            background: #f0f0f0;
+        }
+        
+        .menu-container {
+            text-align: center;
+            font-size: 0;
+            margin: 0 100px;  
+        }
+        
+        .nav {
+            background: linear-gradient(to bottom, #e1e1e1, rgb(208, 208, 208));
+            border-radius: 4px;
+            width: 250px;
+            box-shadow: 5px 3px rgb(165, 165, 165);
+            padding: 5px;
+            
+            display: inline-block;
+            vertical-align: top;
+            margin: 0 10px;
+            font-size: 16px;
+            text-align: left;
+        }
+        
+        .nav > div, .nav > a.pt {
+            display: block;
+            width: 100%;
+            margin-bottom: 3px;
+        }
+        
+        .nav .pt {
+            background: linear-gradient(to bottom, #e3e3e3, rgb(239, 239, 239));
+            text-decoration: none;
+            font-size: 20px;
+            text-align: center;
+            display: block;
+            border: 0.5px solid #ccc;
+            border-radius: 4px;
+            padding: 13px 0;
+            color: black;
+            text-transform: uppercase;
+            font-weight: 700;
+            width: 100%;
+        }
+        
+        .nav .pt:hover {
+            background: linear-gradient(to bottom, rgb(204, 204, 204), rgb(145, 145, 145));
+        }
+        
+        .nav div {
+            position: relative;
+        }
+        
+        .nav div .drop {
+            position: absolute;
+            display: none;
+            left: 100%;
+            top: 0;
+            z-index: 100;
+            min-width: 200px;
+        }
+        
+        .drop_item {
+            text-decoration: none;
+            display: block;
+            background: linear-gradient(to bottom, #e3e3e3, rgb(239, 239, 239));
+            color: black;
+            border: 0.5px solid #ccc;
+            border-radius: 4px;
+            padding: 13px 35px;
+            margin-left: 5px;
+            position: relative;  
+            white-space: nowrap; 
+        }
+        
+        .drop_item:hover {
+            background: linear-gradient(to bottom, rgb(204, 204, 204), rgb(145, 145, 145));
+        }
+        
+        .nav div:hover > .drop,
+        .drop_item:hover > .drop {  
+            display: block;
+        }
+        
+        .nav > div:last-child, .nav > a.pt:last-child {
+            margin-bottom: 0;
+        }
+
+        .nav3 div .drop {
+            position: static;  
+            display: none;
+            margin-left: 20px;  
+            margin-top: 2px;
+            min-width: auto;
+        }
+        
+        .nav3 div:hover .drop {
+            display: block;
+        }
+        
+    </style>
+</head>
+<body>   
+    <div class="menu-container">
+        
+        <div class="nav">
+            <div>
+                <a class="pt" href="#">Главная</a>
+                <div class="drop">
+                    <a class="drop_item" href="#">Главная страница</a>
+                    <a class="drop_item" href="#">Контакты</a>
+                    <a class="drop_item" href="#">О Нас</a>
+                </div>
+            </div>
+            <a class="pt" href="#">Отделы продаж</a>
+            <div>
+                <a class="pt" href="#">Поставщики</a>
+                <div class="drop">
+                    <a class="drop_item" href="#">ООО "Дизайн"</a>
+                    <a class="drop_item" href="#">ООО "Арт"</a>
+                    <a class="drop_item" href="#">ООО "Фотостиль"</a>
+                </div>
+            </div>
+            <a class="pt" href="#">Наши услуги</a>
+            <a class="pt" href="#">Контакты</a>
+            <a class="pt" href="#">О нас</a>
+        </div>
+
+      
+        <div class="nav">
+            <div>
+                <a class="pt" href="#">Каталог</a>
+                <div class="drop">
+                    <div style="position: relative;">
+                        <a class="drop_item" href="#">Книги</a>
+                        <div class="drop">
+                            <a class="drop_item" href="#">Русская классика</a>
+                            <a class="drop_item" href="#">Зарубежная классика</a>
+                        
+                        </div>
+                    </div>
+                    
+                    
+                    <div style="position: relative;">
+                        <a class="drop_item" href="#">Фильмы</a>
+                    </div>
+                    
+                
+                    <div style="position: relative;">
+                     
+                    </div>
+                    
+                    <div style="position: relative;">
+                        <a class="drop_item" href="#">Игры</a>
+                       
+                    </div>
+                </div>
+            </div>
+            
+            <a class="pt" href="#">Новинки</a>
+            
+            <div>
+                <a class="pt" href="#">Жанры</a>
+                
+            </div>
+            
+            <a class="pt" href="#">Авторы</a>
+            <a class="pt" href="#">Акции</a>
+            <a class="pt" href="#">Скидки</a>
+        </div>
+
+       <div class="nav nav3">
+            <div>
+                <a class="pt" href="#">Помощь</a>
+                <div class="drop">
+                    <a class="drop_item" href="#">Как заказать</a>
+                    <a class="drop_item" href="#">Доставка</a>
+                    <a class="drop_item" href="#">Оплата</a>
+                    <a class="drop_item" href="#">Возврат</a>
+                </div>
+            </div>
+            
+           <a class="pt" href="#">Документы</a>
+            </div>
+            
+            <a class="pt" href="#">Отзывы</a>
+            <a class="pt" href="#">Контакты</a>
+            <a class="pt" href="#">Вакансии</a>
+        </div>
+    </div>
+    
+
+    </div>
+</body>
+</html>
